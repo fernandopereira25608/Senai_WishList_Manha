@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "1a15b894-12f5-485b-bdf2-3c62a7e1d8e5",
+		"name": "Senai_	WishList_Manhã",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "Cadastrar Usuário",
+					"request": {
+						"method": "POST",http://localhost:5000/api/usuarios
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Fernandoyuri\",\n\t\"email\" : \"fernandoyuri@gmail.com\",\n\t\"senha\" : \"12345\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"fernando@gmail.com\",\n\t\"senha\" : \"fernando\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Desejos",
+			"item": [
+				{
+					"name": "Listar Todos os Desejos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyaWVscGFpeGFvMTBAZ21haWwuY29tIiwianRpIjoiNSIsImV4cCI6MTU1NDczODQ4OCwiaXNzIjoiV2lzaGxpc3QuV2ViQXBpIiwiYXVkIjoiV2lzaGxpc3QuV2ViQXBpIn0.MrH1gJvd1yJHMZCxpdpn5V7XCuPSsl4hXCuIjq8dcGM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/desejos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"desejos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Por Nome Usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyaWVsQGdtYWlsLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1NTQ2NzkzNDYsImlzcyI6Ildpc2hsaXN0LldlYkFwaSIsImF1ZCI6Ildpc2hsaXN0LldlYkFwaSJ9.cO5gDzcbinkOOGR1eKeOikjfiPSjM9rspxZErmidqi8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/desejos/usuario/enzo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"desejos",
+								"usuario",
+								"enzo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Por Verbo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/desejos/verbo/comprar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"desejos",
+								"verbo",
+								"comprar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Desejo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyaWVsQGdtYWlsLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQXJpZWwiLCJub21lIjoiQXJpZWwiLCJleHAiOjE1NTQ4NTEzNDYsImlzcyI6Ildpc2hsaXN0LldlYkFwaSIsImF1ZCI6Ildpc2hsaXN0LldlYkFwaSJ9.9yUF8IicSusInWs70zmeiqgZrLxruuJRTQC463XAhmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idVerbo\": 2,\n\t\"descricao\": \"Não sei\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/desejos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"desejos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Desejo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyaWVsQGdtYWlsLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1NTQ3Mzg1NzksImlzcyI6Ildpc2hsaXN0LldlYkFwaSIsImF1ZCI6Ildpc2hsaXN0LldlYkFwaSJ9.6yI5WzlhOzAxgcNWbKi5KAB0NOUM9yHS7hVxxKN8FQo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"descricao\": \"Comprar PC da NASA 2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/desejos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"desejos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Desejo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyaWVsQGdtYWlsLmNvbSIsImp0aSI6IjEiLCJleHAiOjE1NTQ3Mzg1NzksImlzcyI6Ildpc2hsaXN0LldlYkFwaSIsImF1ZCI6Ildpc2hsaXN0LldlYkFwaSJ9.6yI5WzlhOzAxgcNWbKi5KAB0NOUM9yHS7hVxxKN8FQo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/desejos/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"desejos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Verbos",
+			"item": [
+				{
+					"name": "Listar Verbos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/verbos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"verbos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
